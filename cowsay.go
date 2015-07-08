@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 import (
-    "bufio"
-    "fmt"
-    "os"
-		"io"
+	"bufio"
+	"fmt"
+	"io"
+	"os"
 )
 
 func LongestLine(lines []string) string {
