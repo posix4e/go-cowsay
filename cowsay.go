@@ -1,10 +1,15 @@
-package cowsay
+package main
 
 import (
-	"fmt"
 	// "unicode"
 	"regexp"
 	"strings"
+)
+import (
+    "bufio"
+    "fmt"
+    "os"
+		"io"
 )
 
 func LongestLine(lines []string) string {
@@ -103,4 +108,15 @@ func Format(text string) string {
 	boxedLines := BoxedStrings(textParts)
 
 	return strings.Join(boxedLines, "\n") + cowFooter
+}
+
+func main() {
+	reader := bufio.NewReader(os.Stdin)
+	for {
+		text, err := reader.ReadString('\n')
+		if err == io.EOF {
+			break
+		}
+		fmt.Printf(Format(string(text)))
+	}
 }
