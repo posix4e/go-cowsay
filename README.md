@@ -2,7 +2,7 @@ cowsay.go
 =========
 ```
 _________________________
-< Basic Cowsay in Golang! >
+< Streaming Cowsay in Golang! >
  -------------------------
         \   ^__^
          \  (oo)\_______
